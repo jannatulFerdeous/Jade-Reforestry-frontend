@@ -7,9 +7,9 @@ const Header = () => {
   return (
     <header className="bg-background shadow-md relative">
       {/* Top section (Navbar 1) */}
-      <div className="bg-background px-6 py-6 flex justify-between items-center mx-12">
+      <div className="bg-background px-6 py-6 flex justify-between items-center mx-20">
         {/* Logo on the left */}
-        <div className=" absolute top-3 flex items-center ">
+        <div className="absolute top-4 flex items-center">
           <Image
             src="/Main Logo.png"
             alt="Jade Reforestry Logo"
@@ -27,40 +27,43 @@ const Header = () => {
               placeholder="Zoeken..."
               className="w-full py-3 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-secondary"
             />
-            <button
-              className="absolute top-1/2 right-1 transform -translate-y-1/2 bg-primary p-1 rounded-full"
-            >
-             <div className="border border-white p-2 rounded-full text-white"> {icons.Searchbtn}</div>
+            <button className="absolute top-1/2 right-1 transform -translate-y-1/2 bg-primary p-1 rounded-full">
+              <div className="border border-white p-2 rounded-full text-white">
+                {icons.Searchbtn}
+              </div>
             </button>
           </div>
         </div>
 
-
         {/* Language and Login */}
-        <div className="flex items-center space-x-6">
-          <div className="text-[#013e12] font-medium cursor-pointer">Netherlands</div>
-          <button className="flex items-center space-x-2">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-5 h-5 text-[#004c1f]"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 11c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4z"
-              />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M14.7 12.35A7.4 7.4 0 017.3 12.35M4.23 18.21a7.4 7.4 0 0115.54 0"
-              />
-            </svg>
-            <span className="text-[#004c1f] font-medium">Inloggen</span>
+        <div className="flex items-center space-x-6 font-primary ">
+          {/* Dropdown for Netherlands */}
+          <div className="relative group">
+            <div className="text-[#013e12] font-medium cursor-pointer inline-flex items-center">
+              <div className="font-light">Netherlands  </div>
+
+              <div className="text-3xl text-secondary">{icons.DownArrow}</div>
+            </div>
+            {/* Dropdown Menu */}
+            <div className="absolute left-0 z-50 mt-2 hidden  group-hover:block bg-white   rounded-sm ">
+              <ul className="py-2 text-sm text-gray-700">
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer  ">Canada</li>
+                <hr/>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer ">Bangladesh</li>
+                <hr/>
+                <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer ">USA</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Login Button */}
+          <button className="inline-flex items-center space-x-1">
+            <div className="text-xl text-secondary">
+            {icons.Profile}
+            </div>
+            <div className="text-[#004c1f] font-light">Inloggen</div>
           </button>
+          <div className="text-xl text-secondary">{icons.Cart}</div>
         </div>
       </div>
 
