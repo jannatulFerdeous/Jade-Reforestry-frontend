@@ -14,7 +14,7 @@ const Repair_Service = () => {
 
       <LookUp />
       <CustomerReview />
-      <Support_Brand />
+   s
       <GetTouch
         title="Let’s Get in Touch"
         description="Tell us about your biggest IT challenge, we want to help you solve it!"

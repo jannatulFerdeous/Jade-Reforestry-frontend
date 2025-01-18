@@ -1,15 +1,15 @@
 'use client';
 
+import { icons } from '@libs/Icons';
 import styles from '../../../shared/styles/home.module.css';
 import { home_data } from '../config/constants';
 import Button from '@components/Button';
 import { useState, useEffect } from 'react';
 
 const Hero = () => {
-  // Destructure hero data
-  const { hero } = home_data;
+  
 
-  const images = ['/home4.jpg', '/home5.jpg', '/home2.jpg', '/blog.jpg'];
+  const images = ['/home1.png', '/home3.jpg', '/home2.jpg'];
 
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -31,24 +31,28 @@ const Hero = () => {
         transition: 'background-image 1s ease-in-out',
       }}
     >
-      <div className="container mx-auto">
-        <div className="flex items-center h-[70vh] lg:h-[1080px] font-primary">
-          <div className="lg:w-[850px] w-[22rem] h-[20rem] lg:h-[500px] rounded-tr-[120px] lg:rounded-tr-[180px] rounded-tl-lg bg-[#ffffff66] rounded-b-lg flex flex-col justify-start px-[3rem] lg:py-[5rem] py-[3rem] mx-auto lg:mx-11">
-            <h1 className="lg:text-[46px] sm:text-[32px] text-[23px] tracking-tight text-secondary font-[600] leading-[1.2] max-w-[500px]">
-              {hero?.title}
-            </h1>
+      {/* Blur overlay */}
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-md"></div>
 
-            <p className="text-[16px] sm:text-[22px] font-[400] text-black leading-[1.3] my-3 sm:my-7 max-w-[500px]">
-              {hero?.description}
-            </p>
-
-            <Button
-              href={hero.button.link}
-              className={`${styles.button_animate} !rounded-lg bg-secondary lg:before:rounded-lg lg:before:outline-offset-2 lg:before:outline-2 lg:before:w-full lg:before:left-0 lg:before:top-0 lg:before:h-full`}
-            >
-              {hero.button.text}
-            </Button>
-          </div>
+      {/* Hero content */}
+      <div className="relative z-10 flex  justify-between items-center h-full px-6 lg:px-20 mx-10 text-white">
+        <div>
+        <h1 className="text-7xl  font-primary  mb-4">Jade Reforestry</h1>
+        <p className="text-3xl font-primary max-w-lg mb-6">
+          Vergroening in harmonie met natuur en landbouw.
+        </p>
+        </div>
+        <div>
+          <p className="text-sm lg:text-base font-light font-primary max-w-xl mb-8">
+          Bij Jade Reforestry geloven we in een toekomst waar landbouw en
+          natuur samen floreren. Met onze praktische groene oplossingen maken
+          we dit werkelijkheid.
+        </p>
+        <Button className=" inline-flex bg-white px-6 py-3 rounded-md gap-9">
+          <span className='text-black font-primary font-normal'>Doe met ons mee</span>
+          
+          <span className='text-primary text-xs '>{icons.rightArrow}</span>
+        </Button>
         </div>
       </div>
 
@@ -58,7 +62,7 @@ const Hero = () => {
           <span
             key={index}
             className={`block w-3 h-3 rounded-full transition-all duration-300 ${
-              currentSlide === index ? 'bg-blue-200' : 'bg-gray'
+              currentSlide === index ? 'bg-blue-200' : 'bg-gray-500'
             }`}
           ></span>
         ))}

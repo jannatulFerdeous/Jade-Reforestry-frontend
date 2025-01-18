@@ -1,98 +1,33 @@
 import { icons } from '@libs/Icons';
-import choose_img from '../../../images/choose.jpg';
-
+import bg from "../../../../public/droom-bg.png";
+import droom from "../../../../public/droom-1.png";
 import slider1 from '../../../images/latest blog/image1.jpg';
 import slider2 from '../../../images/latest blog/image2.jpg';
 import slider3 from '../../../images/latest blog/Image3.jpg';
 
 export const home_data = {
-  //
-  hero: {
-    title: 'The Best Choice for Laptop, Desktop PC & Apple Repair Services',
-    description:
-      'We are the exclusive repair center in Bangladesh with a state of the art lab fully equipped to carry out repairs of any kind of IT products.',
-
-    button: {
-      text: 'Book a Service',
-      link: '/repair-services',
-    },
-  },
-
-  //
-  welcome: {
-    title: 'Welcome to Newtech',
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    button: {
-      text: 'CONTACT US',
-      link: '/contact',
-    },
-
-    cards: [
-      {
-        icon: icons.comoputerRepair,
-        title: 'Free Diagnostic',
-        description: "Lorem Ipsum has been the industry's standard dummy text",
-      },
-      {
-        icon: icons.shieldSearch,
-        title: 'The best in quality',
-        description:
-          "Lorem Ipsum has been the industry's standard dummy text ever since  the 1500s",
-      },
-      {
-        icon: icons.userRepair,
-        title: 'tested experience',
-        description:
-          "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
-      },
-    ],
-  },
-
+ 
   //////////////////////////////////////////////////Choose US //////////////////////////////////////
-  choose_data: {
-    image: choose_img,
-    title: 'WHY CHOOSE US',
+  droom_data: {
+    img1: bg,
+    img2: droom, 
+    title: 'Onze droom',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    list: [
-      {
-        icon: icons.coin,
-        title: 'Save Money',
-      },
-      {
-        icon: icons.watch,
-        title: 'Save Time',
-      },
-      {
-        icon: icons.like,
-        title: 'Make a Difference',
-      },
-      {
-        icon: icons.computer,
-        title: 'Get Back to the Work',
-      },
-      {
-        icon: icons.peace,
-        title: 'Regain your Peace',
-      },
-    ],
-    button: {
-      text: 'Learn More',
-      link: '#',
+      'We streven ernaar landbouw op een slimme manier te vergroenen, zonder in te boeten op productie. Stel je een groene dooradering voor die Europa doorkruist, waar natuur en landbouw harmonieus samenkomen. Een plek waar een hert van Polen naar Portugal kan lopen, onder een weelderig bladerdak, door bossen en velden, zonder ooit het gevoel te hebben de veilige groene haven van de natuur te verlaten.',
+ 
+      list: {
+      text1: 'Slimme groene landbouw',
+      text2: 'Een groen netwerk door heel Europa',
+      text3: 'Harmonie tussen natuur en landbouw',
+      text4: 'Vrij bewegende wilde dieren',
+      text5: 'Een aaneengesloten weelderig bladerdak',
+      text6: 'Veilige groene havens',
+
+
     },
   },
 
-  ////////////////////////////////////////////////OUR SERVICE ////////////////////////////
-  our_service: {
-    title: 'Our Service',
-    description: 'WE DO A LOT MORE THAN FIX COMPUTERS!',
-    button: {
-      text: 'Learn More',
-      link: '#',
-    },
-  },
-
+  
   //////////////////////////////////////////////////////////////// lATEST BLOG ///////////////////////////////////////////////////
   latest_blog: {
     title: 'Our Latest Blog',
